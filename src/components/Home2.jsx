@@ -4,12 +4,13 @@ import image1 from '../assets/design1.png';
 import image11 from '../assets/blog2.png';
 import image from '../assets/home.png';
 import styled from "styled-components";
-import photo from "./Service/image/2.jpg"
-import photo1 from "./Service/image/1.jpg"
-import photo3 from "./Service/image/3.jpg"
-import photo4 from "./Service/image/4.jpg"
-import photo5 from "./Service/image/5.jpg"
-import photo6 from "./Service/image/6.jpg"
+import photo from "./Service/Plv/image/1.jpg"
+import photo2 from "./Service/Plv/image/2.jpg"
+import photo3 from "./Service/Plv/image/3.jpg"
+import photo4 from "./Service/Plv/image/4.jpg"
+import photo5 from "./Service/Plv/image/6.jpg"
+
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -44,22 +45,21 @@ export default class Responsive extends Component {
       breakpoint: 480,
       dots: true,
       infinite: true,
-      speed: 10,
+      speed: 500,
       slidesToShow: 2,
       slidesToScroll: 2,
     };
 
     const imageSources = [
-      {src: photo4, size: "4300w"},
-      {src: photo, size: "4000w"},
-      {src: photo1, size: "3850w"},
-      {src: photo3, size: "4100w"},
-      {src: photo5, size: "4100w"},
-      {src: photo6, size: "3900w"}
+      {src: photo5, size: "3500w"},
+      {src: photo4, size: "3500w"},
+      {src: photo, size: "3500w"},
+      {src: photo3, size: "3500w"},
+      {src: photo2, size: "3500w"}
     ];
     
     const sliderStyle = { width: '98%',
-                          backgroundColor:'white'  
+                          backgroundColor:'#212121'  
                           };
 
     const mobileSettings = {
@@ -68,7 +68,7 @@ export default class Responsive extends Component {
       infinite: true,
       speed: 2000,
       slidesToShow: 3,
-      slidesToScroll: 1,
+      slidesToScroll: 2,
     };
 
     return (
@@ -76,9 +76,9 @@ export default class Responsive extends Component {
         <div className='space'>
          <h1 className='text-center'>SOSPANNEAUX</h1>
          </div>
-      <Slider ref={(slider) => (this.slider = slider)} {...settings} {...mobileSettings} style={sliderStyle}>
+      <Slider  ref={(slider) => (this.slider = slider)} {...settings} {...mobileSettings} style={sliderStyle}>
       {imageSources.map((image) => (
-        <div key={image.src} className='sidebar-image' >
+        <div key={image.src}>
           <img src={image.src} srcSet={`${image.src} ${image.size}`} alt="slide" />
         </div>
       ))}
@@ -97,8 +97,8 @@ const Div =  styled.section`
     text-align: center;
     background-color: var(--primary-color);
   }
-
-  .sidebar-image {
-    z-index: 1;
-  }
+ 
+    background-size: cover;
+    background-position: center center;
+ 
 `;

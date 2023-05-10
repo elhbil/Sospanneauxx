@@ -139,14 +139,14 @@ background-color:#212121;
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {
     position: relative;
-    width: 100%;
+    width: 99%;
     margin: 0;
 
     .brand {
       padding: 2rem 1rem;
       justify-content: space-between;
-      width: 100%;
-      z-index: 2;
+      width: 99%;
+      z-index: 9999;
       background-color: #000;
 
       .toggle {
@@ -160,11 +160,12 @@ background-color:#212121;
       position: absolute;
       background-color: black;
       flex-direction: column;
-      margin-top: 5rem;
-      width: 100vw;
-      padding: 5rem 0;
+      margin-top: -3rem;
+      margin-left: 6rem;
+      width: 55vw;
+      padding: 3rem 0;
       transition: 0.4s ease-in-out;
-      gap: 2rem;
+      gap: 1rem;
       ul {
         flex-direction: column;
         gap: 1rem;
@@ -179,5 +180,9 @@ background-color:#212121;
     .hide {
       top: -600px;
     }
+  }
+
+  .brand, .links {
+    z-index: 999;
   }
 `;

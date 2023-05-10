@@ -113,7 +113,7 @@ const Section = styled.section`
     }
   }
   @media screen and (min-width: 280px) and (max-width: 1080px) {
-    margin: 2rem 1rem;
+    margin: 1rem 1rem;
     .title {
       h2 {
         font-size: 2.4rem;
@@ -122,7 +122,7 @@ const Section = styled.section`
     }
     .blogs {
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
     }
   }
 `;
